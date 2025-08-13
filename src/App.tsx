@@ -8,6 +8,7 @@ import ServicesSection from './components/home/ServicesSection';
 import ReadyToPartnerSection from './components/home/ReadyToPartnerSection';
 import StrategicPartnershipsSharedGrowthSection from './components/home/StrategicPartnershipsSharedGrowthSection';
 import ContactSection from './components/home/ContactSection';
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <ReadyToPartnerSection />
       <StrategicPartnershipsSharedGrowthSection />
       <ContactSection />
+      <Footer />
     </div>
   );
 }
