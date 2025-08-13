@@ -1,29 +1,22 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Contact from './pages/Contact';
 import Header from './components/Header';
-import HomeHero from './components/home/homehero';
-import HomeAbout from './components/home/HomeAbout';
-import VisionMissionValues from './components/home/VisionMissionValues';
-import HomeStrategicPartnerships from './components/home/HomeStrategicPartnerships';
-import ServicesSection from './components/home/ServicesSection';
-import ReadyToPartnerSection from './components/home/ReadyToPartnerSection';
-import StrategicPartnershipsSharedGrowthSection from './components/home/StrategicPartnershipsSharedGrowthSection';
-import ContactSection from './components/home/ContactSection';
 import Footer from './components/Footer';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <Router>
       <Header />
-      <HomeHero />
-      <HomeAbout />
-      <VisionMissionValues />
-      <HomeStrategicPartnerships />
-      <ServicesSection />
-      <ReadyToPartnerSection />
-      <StrategicPartnershipsSharedGrowthSection />
-      <ContactSection />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
       <Footer />
+    </Router>
     </div>
   );
 }

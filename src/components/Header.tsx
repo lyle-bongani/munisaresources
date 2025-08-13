@@ -1,14 +1,16 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const navLinks = [
-  { name: 'Home', href: '#', active: true },
-  { name: 'About Us', href: '#' },
-  { name: 'Services', href: '#' },
-  { name: 'Partnership', href: '#' },
-  { name: 'Contact Us', href: '#' },
+  { name: 'Home', href: '/' },
+  { name: 'About Us', href: '/about' },
+  { name: 'Services', href: '/services' },
+  { name: 'Partnership', href: '/partnership' },
+  { name: 'Contact Us', href: '/contact' },
 ];
 
 const Header: React.FC = () => {
+  const location = useLocation();
   return (
     <header
       className="w-full flex items-center justify-between px-8 py-3 bg-white"
@@ -26,29 +28,29 @@ const Header: React.FC = () => {
       {/* Navigation - Centered */}
       <nav className="flex-1 flex items-center justify-center gap-8">
         {navLinks.map(link => (
-          <a
+          <Link
             key={link.name}
-            href={link.href}
+            to={link.href}
             className={
-              link.active
+              location.pathname === link.href
                 ? 'text-[#ff9800] font-medium text-[15px]'
                 : 'text-gray-700 hover:text-[#ff9800] transition-colors duration-150 text-[15px]'
             }
             style={{ fontFamily: 'Google Sans' }}
           >
             {link.name}
-          </a>
+          </Link>
         ))}
       </nav>
 
       {/* Contact Us Button */}
-      <button
+      <Link
+        to="/contact"
         className="bg-[#f76c07] hover:bg-[#e55c00] text-white font-medium rounded-md px-6 py-2 text-[15px] transition-colors duration-150"
         style={{ fontFamily: 'Google Sans' }}
-        type="button"
       >
         Contact Us
-      </button>
+      </Link>
     </header>
   );
 };
