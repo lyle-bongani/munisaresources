@@ -21,10 +21,10 @@ const AboutGallery: React.FC = () => (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
       <div className="flex flex-col gap-6">
         <img src={galleryImages[0].src} alt={galleryImages[0].alt} className="rounded-xl w-full h-[220px] md:h-[230px] object-cover shadow-md" />
-        <img src={galleryImages[2].src} alt={galleryImages[2].alt} className="rounded-xl w-full h-[220px] md:h-[230px] object-cover shadow-md" />
+        <img src={galleryImages[1].src} alt={galleryImages[1].alt} className="rounded-xl w-full h-[220px] md:h-[230px] object-cover shadow-md" />
       </div>
       <div className="flex flex-col gap-6 justify-between">
-        <img src={galleryImages[1].src} alt={galleryImages[1].alt} className="rounded-xl w-full h-[460px] md:h-[466px] object-cover shadow-md" />
+        <img src={galleryImages[2].src} alt={galleryImages[2].alt} className="rounded-xl w-full h-[460px] md:h-[466px] object-cover shadow-md" />
       </div>
     </div>
   </section>

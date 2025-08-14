@@ -37,7 +37,7 @@ const services = [
 
 const ServicesSection: React.FC = () => {
   return (
-    <section className="bg-white py-10 md:py-16 mt-16 mb-8">
+    <>
       <div className="w-[90vw] max-w-7xl mx-auto bg-[#f5f6fa] rounded-3xl p-8 md:p-12">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-[#f76c07] mb-2" style={{ fontFamily: 'Google Sans' }}>
           Our Services
@@ -78,7 +78,7 @@ const ServicesSection: React.FC = () => {
           ))}
         </div>
       </div>
-    </section>
+    </>
   );
 };
 
